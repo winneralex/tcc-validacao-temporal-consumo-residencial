@@ -1,0 +1,57 @@
+{
+  "base": "dados/Base_Oficial_Filtrada_Consumo_Residencial_Brasil_2004_2026-06.xlsx",
+  "periodo_total": [
+    "2004-01-01",
+    "2026-06-01"
+  ],
+  "n_total": 270,
+  "periodo_treino": [
+    "2004-01-01",
+    "2025-06-01"
+  ],
+  "n_treino": 258,
+  "periodo_teste": [
+    "2025-07-01",
+    "2026-06-01"
+  ],
+  "n_teste": 12,
+  "criterio_selecao_sarima": "Fallback: menor AIC geral; nenhum candidato aprovou simultaneamente os dois Ljung-Box",
+  "grade_sarima": "p,q,P,Q em {0,1,2}; d=1; D=1; s=12; 81 candidatos",
+  "quantidade_modelos_convergentes": 81,
+  "quantidade_modelos_com_residuos_ok": 0,
+  "modelo_escolhido_aprovou_residuos": false,
+  "menor_aic_geral": 3118.81017709996,
+  "sarima_escolhido": "SARIMA(0, 1, 2)x(2, 1, 2, 12)",
+  "sarima_aic": 3118.81017709996,
+  "sarima_bic": 3142.501642539484,
+  "holt_winters_escolhido": "Multiplicativa",
+  "metricas": {
+    "Ingenio sazonal": {
+      "MAE_GWh": 516.3033937500012,
+      "RMSE_GWh": 647.1496622040876,
+      "MAPE_percentual": 3.3075342988379366,
+      "Bias_real_menos_previsto_GWh": 389.0300185833341
+    },
+    "Holt-Winters": {
+      "MAE_GWh": 321.68992609193236,
+      "RMSE_GWh": 424.80021894767486,
+      "MAPE_percentual": 2.0447739034010795,
+      "Bias_real_menos_previsto_GWh": 72.78332342934694
+    },
+    "SARIMA": {
+      "MAE_GWh": 311.2911515820945,
+      "RMSE_GWh": 477.26608999433677,
+      "MAPE_percentual": 1.94936088272965,
+      "Bias_real_menos_previsto_GWh": 177.12468184482046
+    }
+  },
+  "melhor_modelo_no_teste_por_mape": "SARIMA",
+  "ambiente": {
+    "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+    "plataforma": "Windows-11-10.0.26200-SP0",
+    "pandas": "2.3.3",
+    "numpy": "2.3.5",
+    "scipy": "1.16.3",
+    "statsmodels": "0.14.6"
+  }
+}

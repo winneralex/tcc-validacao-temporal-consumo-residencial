@@ -1,0 +1,39 @@
+{
+  "base": "dados/Base_Oficial_Filtrada_Consumo_Residencial_Brasil_2004_2026-06.xlsx",
+  "periodo_treinamento_final": [
+    "2004-01-01",
+    "2026-06-01"
+  ],
+  "n_treinamento": 270,
+  "modelo_final": "Holt-Winters com tendencia aditiva e sazonalidade multiplicativa",
+  "periodo_sazonal": 12,
+  "periodo_previsao": [
+    "2026-07-01",
+    "2027-06-01"
+  ],
+  "horizonte_meses": 12,
+  "intervalo": {
+    "nivel": 0.95,
+    "metodo": "Bootstrap em blocos contiguos de 12 meses dos residuos relativos centrados, com erro multiplicativo",
+    "repeticoes": 10000,
+    "semente": 20260825,
+    "tamanho_bloco_meses": 12,
+    "n_residuos_disponiveis": 246,
+    "media_residuos_relativos_apos_centragem": 6.205514873412969e-19
+  },
+  "sse": 21683300.03398374,
+  "aic": 3081.2803644767137,
+  "aicc": 3084.0054640783073,
+  "bic": 3138.855115820688,
+  "total_previsto_jul2026_jun2027_GWh": 189647.14814077428,
+  "total_real_jul2025_jun2026_GWh": 182773.91339499998,
+  "variacao_total_prevista_percentual": 3.760511890403251,
+  "ambiente": {
+    "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+    "plataforma": "Windows-11-10.0.26200-SP0",
+    "pandas": "2.3.3",
+    "numpy": "2.3.5",
+    "scipy": "1.16.3",
+    "statsmodels": "0.14.6"
+  }
+}

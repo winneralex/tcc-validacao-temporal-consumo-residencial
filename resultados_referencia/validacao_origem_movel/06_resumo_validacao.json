@@ -1,0 +1,62 @@
+{
+  "base": "dados/Base_Oficial_Filtrada_Consumo_Residencial_Brasil_2004_2026-06.xlsx",
+  "periodo_total": [
+    "2004-01-01",
+    "2026-06-01"
+  ],
+  "metodo": "Origem movel expansiva com cinco testes anuais de 12 meses",
+  "janelas": [
+    "2021-07_a_2022-06",
+    "2022-07_a_2023-06",
+    "2023-07_a_2024-06",
+    "2024-07_a_2025-06",
+    "2025-07_a_2026-06"
+  ],
+  "grade_sarima_por_janela": "p,q,P,Q em {0,1,2}; d=1; D=1; s=12; 81 candidatos",
+  "total_ajustes_sarima_planejados": 405,
+  "criterio_principal": "Menor MAPE agregado nas 60 previsoes; RMSE e MAE como desempate",
+  "vencedor_mape_60_meses": "Holt-Winters",
+  "metricas_agregadas": [
+    {
+      "MAE_GWh": 468.6584306714,
+      "Posicao_MAPE_60_meses": 1,
+      "RMSE_GWh": 575.5775906728,
+      "MAPE_percentual": 3.2822169192,
+      "Bias_real_menos_previsto_GWh": 101.1605636483,
+      "Modelo": "Holt-Winters",
+      "MAPE_medio_das_janelas": 3.2822169192,
+      "Desvio_padrao_MAPE_janelas": 1.3525335414,
+      "Vitorias_MAPE_em_5_janelas": 2
+    },
+    {
+      "MAE_GWh": 533.8865487177,
+      "Posicao_MAPE_60_meses": 2,
+      "RMSE_GWh": 640.9899805334,
+      "MAPE_percentual": 3.7712428285,
+      "Bias_real_menos_previsto_GWh": 47.6004581629,
+      "Modelo": "SARIMA",
+      "MAPE_medio_das_janelas": 3.7712428285,
+      "Desvio_padrao_MAPE_janelas": 1.2264810937,
+      "Vitorias_MAPE_em_5_janelas": 2
+    },
+    {
+      "MAE_GWh": 651.4926898667,
+      "Posicao_MAPE_60_meses": 3,
+      "RMSE_GWh": 841.574187923,
+      "MAPE_percentual": 4.5277861765,
+      "Bias_real_menos_previsto_GWh": 519.3127753333,
+      "Modelo": "Ingenio sazonal",
+      "MAPE_medio_das_janelas": 4.5277861765,
+      "Desvio_padrao_MAPE_janelas": 3.0460987586,
+      "Vitorias_MAPE_em_5_janelas": 1
+    }
+  ],
+  "ambiente": {
+    "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+    "plataforma": "Windows-11-10.0.26200-SP0",
+    "pandas": "2.3.3",
+    "numpy": "2.3.5",
+    "scipy": "1.16.3",
+    "statsmodels": "0.14.6"
+  }
+}
