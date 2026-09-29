@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.venv/
+src/resultados_sarima_ampliado/
+src/resultados_origem_movel/
+src/resultados_previsao_final_bootstrap/
+analise_exploratoria.json
